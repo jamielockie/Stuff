@@ -194,13 +194,15 @@ input.submitGuess {
 		padding-left: 20px;
 		margin: 20px 0;
 	}
+	div {
+		margin: 40px;
+	}
 	@include respond-to('medium') {
 		margin-bottom: 20px;
 		max-width: 100%;
 		text-overflow: none;
 	}
 }
-
 
 .mobileTitle {
 	display: none;
@@ -213,3 +215,6 @@ input.submitGuess {
 	}
 }
 
+.matchPage {
+	height: 100vh;
+}
