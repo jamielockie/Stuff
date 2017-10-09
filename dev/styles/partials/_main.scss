@@ -30,6 +30,7 @@ header {
 	right:0;
 	text-align: center;
 	color: $grey;
+	cursor: pointer;
 	@include respond-to ('medium') {
 		font-size: 5.0rem;
 	}
@@ -38,23 +39,8 @@ header {
 	}
 }
 
-.hero__title {
-	font-family: $logo;
-	margin: 0;
-	text-align: center;
-	font-size: 10.0rem;
-	letter-spacing: .4rem;
-	@include respond-to('small') {
-		font-size: 7.0rem;
-	}
-	@include respond-to("xsmall") {
-		font-size: 5rem;
-	}
-}
 
-.hero__subtitle {
-	text-align: center;
-}
+
 
 // ******* SUBMIT PAGE SECTION
 
@@ -153,7 +139,11 @@ input.submit {
 
 button.playNow {
 	padding: 1.0rem 1.5rem;
-	margin: 5.0rem 0;
+	// margin: 5.0rem 0;
+}
+
+.playNow-container {
+	margin: 4rem 0rem;
 }
 
 // *****ANSWERS SECTION

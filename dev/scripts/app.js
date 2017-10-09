@@ -1,6 +1,6 @@
 const stuffApp = {};
 
-stuffApp.thingsArray = [`Stuff you wouldn't say to your Grandma`, `Stuff you wish you didn't like`, `Stuff you ate as a child`, `Stuff dogs are actually saying when they bark`, `Stuff not to do while driving!!`, `Stuff that is harder than it looks`, `Stuff people do when no one is looking`, `Stuff you don't want to happen at a family gathering`, `Stuff not to do if you're on a boat`, `Stuff that you should not do in an elevator`, `Stuff that you shouldn't bring into the bathtub`, `Stuff that you would't want to be allergic to`, `Stuff you wouldn't do for a million dollars`, `Stuff you would like to add to the 10 Commandments`, `Stuff you shouldn\'t shout at the top of your lungs`, `Stuff you shouldn't hold while riding a bike`, `Stuff you can do to get rid of unwanted guests`];
+stuffApp.thingsArray = [`Stuff you wouldn't say to your Grandma`, `Stuff you wish you didn't like`, `Stuff you ate as a child`, `Stuff dogs are actually saying when they bark`, `Stuff not to do while driving!!`, `Stuff that is harder than it looks`, `Stuff people do when no one is looking`, `Stuff you don't want to happen at a family gathering`, `Stuff you shouldn't do if you're on a boat`, `Stuff that you should not do in an elevator`, `Stuff that you shouldn't bring into the bathtub`, `Stuff that you would't want to be allergic to`, `Stuff you wouldn't do for a million dollars`, `Stuff you would like to add to the 10 Commandments`, `Stuff you shouldn\'t shout at the top of your lungs`, `Stuff you shouldn't hold while riding a bike`, `Stuff you can do to get rid of unwanted guests`];
 
 const playerSpots = [];
 const playerList = [];
@@ -38,7 +38,10 @@ stuffApp.events = function() {
 				// Disables button after 1 submit
 				$(this).find('input[type="submit"]').prop('disabled', true);
 		});
-	
+	$('button.addPlayer').on('click', function(e) {
+		e.preventDefault();
+		stuffApp.addPlayer();
+	});
 	$('button.playNow').on('click', function(e) {
 				e.preventDefault();
 
@@ -119,6 +122,20 @@ stuffApp.checkGuess = function() {
 								window.scrollTo(0, 0);
 					});
 	};
+};
+
+stuffApp.addPlayer = function() {
+	console.log('addPlayer');
+	$('.playerCards').append(`
+		<details class="playerCard">
+			<summary>Player 1</summary>
+			<form class="submitAnswer animated fadeInDown" action="" class=form1>
+				<input type="text" name="playerName" placeholder="Player One Name">
+				<input maxlength='50' type="password" name= "playerAnswer" placeholder="Enter your answer">
+				<input type="submit" class="submit" value="submit answer">
+			</form>
+	</details>
+		`);
 };
 
 stuffApp.displayAnswers = function() {

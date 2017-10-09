@@ -1,0 +1,21 @@
+h1 {
+	font-family: $logo;
+	margin: 0;
+	text-align: center;
+	font-size: 10.0rem;
+	letter-spacing: .4rem;
+	@include respond-to('small') {
+		font-size: 7.0rem;
+	}
+	@include respond-to("xsmall") {
+		font-size: 5rem;
+	}
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	font-size: 2rem;
+}
