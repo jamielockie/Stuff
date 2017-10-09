@@ -3,6 +3,7 @@ $(function() {
 		// List of Categories
 		var thingsArray = ['Stuff you wouldn\'t say to your Grandma', 'Stuff you wish you didn\'t like', 'Stuff you ate as a child', 'Stuff dogs are actually saying when they bark', 'Stuff not to do while driving!!', 'Stuff that is harder than it looks', 'Stuff people do when no one is looking', 'Stuff you don\'t want to happen at a family gathering', 'Stuff not to do if you\'re on a boat', `Stuff that you should not do in an elevator`, `Stuff that you shouldn\'t bring into the bathtub`, `Stuff that you would\'t want to be allergic to`, `Stuff you wouldn\'t do for a million dollars`, `Stuff you would like to add to the 10 Commandments`, `Stuff you shouldn\'t shout at the top of your lungs`, `Stuff you shouldn\'t hold while riding a bike`, `Stuff you can do to get rid of unwanted guests`, ``]
 
+
 		// random Item from Category
 		var ranNum = Math.floor(Math.random() * thingsArray.length);
 
@@ -26,19 +27,19 @@ $(function() {
 		const answerList = [];
 
 		// Adds Player Card
-		// $('button.addPlayer').on('click', function(e) {
-		// 	e.preventDefault();
-		// 	$('.playerCards').append(`
-		// 		<details>
-		// 			<summary>Player 1</summary>
-		// 			<form class="submitAnswer animated fadeInDown" action="" class=form1>
-		// 				<input type="text" name="playerName" placeholder="Player One Name">
-		// 				<input maxlength='50' type="password" name= "playerAnswer" placeholder="Enter your answer">
-		// 				<input type="submit" class="submit" value="submit answer">
-		// 			</form>
-		// 		</details>
-		// 	`)
-		// })
+		$('button.addPlayer').on('click', function(e) {
+			e.preventDefault();
+			$('.playerCards').append(`
+				<details>
+					<summary>Player $()</summary>
+					<form class="submitAnswer animated fadeInDown" action="" class=form1>
+						<input type="text" name="playerName" placeholder="Player One Name">
+						<input maxlength='50' type="password" name= "playerAnswer" placeholder="Enter your answer">
+						<input type="submit" class="submit" value="submit answer">
+					</form>
+				</details>
+			`)
+		})
 
 		// Takes values of player Name and Answer and adds them to global scope Arrays
 		$('.submitAnswer').on('submit', function(e) {
@@ -53,8 +54,6 @@ $(function() {
 				// Disables button after 1 submit
 				$(this).find('input[type="submit"]').prop('disabled', true);
 		});
-
-
 
 		// on "playNow" Click....
 		$('button.playNow').on('click', function(e) {
@@ -81,7 +80,6 @@ $(function() {
 						} else if (nameA > nameB) {        
 								return 1    
 						} return 0
-
 				});
 
 				// 2. Appends Input (radio) and label (string) of playerList
