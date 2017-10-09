@@ -1,5 +1,3 @@
-# Getting Started
+# STUFF
 
-1. `git clone` this repo
-2. `npm install`
-3. enjoy!
+The Party Game for pals.
